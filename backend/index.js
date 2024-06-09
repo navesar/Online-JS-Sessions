@@ -21,7 +21,7 @@ const io = new Server(
 	}
 );
 
-
+const port = process.env.PORT || 3000;
 
 
 async function fetchCodeBlocks() {
@@ -66,4 +66,4 @@ io.on(
 	}
 );
 
-server.listen(process.env.SERVER_PORT, () => console.log(`Server running on port ${process.env.SERVER_PORT}`));
+server.listen(port, "0.0.0.0",() => console.log(`Server running on port ${port}`));
