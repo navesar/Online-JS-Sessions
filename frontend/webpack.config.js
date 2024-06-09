@@ -1,7 +1,9 @@
-module.exports = {
+import path from 'path';
+
+export default {
   resolve: {
     fallback: {
-      "path": import.meta.resolve("path-browserify")
+      "path": require.resolve("path-browserify")
     }
   }
 };
